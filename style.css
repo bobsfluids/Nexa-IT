@@ -1,1 +1,212 @@
-body { font-family: Arial; }
+/* =========================
+   RESET & BASE STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+header {
+  background: #1E2A38;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #E67E22;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: #2C3E50;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #E67E22;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d96b1e;
+}
+
+/* =========================
+   SECTIONS (SERVICES, ABOUT, PORTFOLIO)
+========================= */
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.services, .portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-item, .portfolio-item {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.service-item:hover, .portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-item h3, .portfolio-item h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1E2A38;
+}
+
+.service-item p, .portfolio-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact button {
+  width: fit-content;
+  align-self: flex-start;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #1E2A38;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer a {
+  color: #E67E22;
+  margin: 0 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .about {
+    flex-direction: column;
+  }
+}
